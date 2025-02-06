@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "Devtiro - Kotlin & Spring Boot",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	"features": {
+		// Install Kotlin in the devcontainer.
+		// https://github.com/devcontainers-extra/features/tree/main/src/kotlin-sdkman
+		"ghcr.io/devcontainers-extra/features/kotlin-sdkman:2": {
+			"version": "2.1.10",
+			"jdkVersion": "21", // Same as docker-compose.yml
+		},
+		// Install NodeJS in the devcontainer.
+		// https://github.com/devcontainers/features/tree/main/src/node
+		"ghcr.io/devcontainers/features/node:1": {
+			"version": "20",
+		},
+	}
+}

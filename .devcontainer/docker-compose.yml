@@ -1,0 +1,22 @@
+services:
+  devcontainer:
+    # https://hub.docker.com/r/microsoft/devcontainers-java
+    image: mcr.microsoft.com/devcontainers/java:1-21-bookworm # Same as in devcontainer.json
+    volumes:
+      - ../..:/workspaces:cached
+    network_mode: service:db
+    command: sleep infinity
+
+  db:
+    # https://hub.docker.com/_/postgres
+    image: postgres:17.2
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: postgres
+
+volumes:
+  postgres-data:
