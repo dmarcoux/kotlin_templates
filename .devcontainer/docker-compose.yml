@@ -6,6 +6,8 @@ services:
       - ../..:/workspaces:cached
     network_mode: service:db
     command: sleep infinity
+    ports:
+      - "8080:8080"
 
   db:
     # https://hub.docker.com/_/postgres
