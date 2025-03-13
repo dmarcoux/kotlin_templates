@@ -29,3 +29,24 @@ which relies on [Docker](https://www.docker.com/) and
 [Docker-Compose](https://docs.docker.com/compose/). devcontainer is [supported
 in various IDEs/editors](https://containers.dev/supporting), in addition to
 having a [CLI](https://github.com/devcontainers/cli).
+
+## Kotlin Development Environment with Nix Flakes
+
+Reproducible development environment for Kotlin which relies on
+[Nix](https://github.com/NixOS/nix) [Flakes](https://nixos.wiki/wiki/Flakes), a
+purely functional and cross-platform package manager.
+
+1. Install Nix with the [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer).
+
+2. Install [just](https://just.systems/) to easily and simply run
+   commands defined in [justfile](justfile). Start with `just` to see what is
+   available. If you prefer to not use `just`, the commands from
+   [justfile](justfile) document what you can do.
+
+   <details>
+     <summary>Installation instructions</summary>
+
+     | Homebrew (MacOS, Linux) | Linux |
+     |-------------------------|-------|
+     | `brew install just`     | Search for the package `just` in your package manager. |
+   </details>
